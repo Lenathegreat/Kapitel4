@@ -14,6 +14,6 @@ def print_hi(name):
 if __name__ == '__main__':
     # you = input("who are you?")
     #print_hi(you)
-type("Lena")
+## type("Lena")
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
