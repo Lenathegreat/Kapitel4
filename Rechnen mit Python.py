@@ -6,14 +6,15 @@ name = "" #Leerer Name
 
 print(name or "no name provided") ## Truthy wenn Name leer ist wird hier FALSE
 
-
-
 ### IF
-user_input= ""
+user_input = ""
 def get_input():
+     user_input = ""
      user_input = input("How much do you want?")
-     return int(user_input)
-def check_int(number_to_add):
+     print(user_input)
+     return user_input
+
+def check_int (number_to_add):
 
     try:
 
@@ -22,11 +23,26 @@ def check_int(number_to_add):
     except ValueError:
 
         print("this is not a number please try again:")
-        number_to_add=get_input()
+        return "Error"
 
+#call first function get input
 number_to_add = get_input()
-number_to_add= check_int(number_to_add)
 print(type(number_to_add))
+
+##call second function to check if inptut as long as it reutns an error
+
+while_Number = ""
+
+while check_int(number_to_add) == "Error" or while_Number =="" :
+    print("Do while: ")
+    if check_int(number_to_add) == "Error":
+        number_to_add=get_input()
+        number_to_add=check_int(number_to_add)
+
+    else:
+        number_to_add=check_int(number_to_add)
+
+    while_Number = number_to_add
 
 number = 10 + number_to_add
 
@@ -39,7 +55,7 @@ print(message)
 
 ## if-ausdruck
 
-ifNumber = get_input()
+ifNumber = number
 message_ifAusdruck = "10 or more" if ifNumber > 10 else "smaller"
 print(message_ifAusdruck)
 
